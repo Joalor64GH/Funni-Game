@@ -48,7 +48,6 @@
 
 	<assets path="assets/images" />
 	<assets path="assets/data" />
-	<assets path="assets/videos" />
 	<assets path="assets/scripts" />
 	
 	<!-- <library name="noPreload" preload='false'/> -->
@@ -61,12 +60,12 @@
 	<define name="PRELOAD_ALL" unless="web" />
 	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
 	
+	<library name="videos"        preload="true" />
 	<section if="PRELOAD_ALL">
 		<library name="data"    preload="true" />
 		<library name="sounds"  preload="true" />
 		<library name="music" 	preload="true" />
 		<library name="images"  preload="true" />
-		<library name="videos"  preload="true" />
 		<library name="scripts" preload="true" />
 	</section>
 	
@@ -75,15 +74,17 @@
 		<library name="sounds"  preload="false" />
 		<library name="music" 	preload="false" />
 		<library name="images"  preload="false" />
-		<library name="videos"  preload="false" />
 		<library name="scripts" preload="false" />
 	</section>
 
+    <assets path="assets/videos"      library="videos"  if="VIDEO_PLUGIN"/>
 	<assets path="assets/swf"         library="swf"     if="SWF_ALLOWED"/>
 
 	<section if="MODS_ALLOWED">
 		<assets path='example_mods' rename='mods' embed='false'/>
 	</section>
+
+    <assets path="assets/fonts" embed='true'/>
 
 	<!-- _______________________________ Libraries ______________________________ -->
 

@@ -19,9 +19,9 @@ class MainMenuState extends FlxState
 		// Create menu
 		Menu.title = "Remind me to come up with a name later";
 		#if !web
-		Menu.options = ['Play', 'Mods', 'Options', 'Exit'];
+		Menu.options = ['Play', 'Mods', 'Webm Loader', 'Options', 'Exit'];
 		#else
-		Menu.options = ['Play', 'Mods', 'Options'];
+		Menu.options = ['Play', 'Mods', 'Webm Loader', 'Options'];
 		#end
 		Menu.includeExitBtn = false;
 		Menu.callback = (option:MenuSelection) ->
@@ -36,8 +36,11 @@ class MainMenuState extends FlxState
 				case 1:
 					trace('Mods');
 				case 2:
-					trace('Options');
+					trace('Webm Loader');
+					FlxG.switchState(new VideoState());
 				case 3:
+					trace('Options');
+				case 4:
 					trace('Exit');
 					#if (windows || cpp)
 					Sys.exit(0);
