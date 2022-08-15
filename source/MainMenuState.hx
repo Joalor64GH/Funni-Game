@@ -19,9 +19,9 @@ class MainMenuState extends FlxState
 		// Create menu
 		Menu.title = "Remind me to come up with a name later";
 		#if !web
-		Menu.options = ['Play', 'Options', 'Exit'];
+		Menu.options = ['Play', 'Mods', 'Options', 'Exit'];
 		#else
-		Menu.options = ['Play', 'Options'];
+		Menu.options = ['Play', 'Mods', 'Options'];
 		#end
 		Menu.includeExitBtn = false;
 		Menu.callback = (option:MenuSelection) ->
@@ -34,8 +34,10 @@ class MainMenuState extends FlxState
 					trace('Play');
 					FlxG.switchState(new PlayState());
 				case 1:
-					trace('Options');
+					trace('Mods');
 				case 2:
+					trace('Options');
+				case 3:
 					trace('Exit');
 					#if (windows || cpp)
 					Sys.exit(0);
