@@ -6,21 +6,21 @@
 		"type": "hxcpp",
 		"preLaunchTask": "Build Windows",
 		"request": "launch",
-		"program": "${workspaceFolder}/export/windows/release/bin/game-jam-template.exe"
+		"program": "${workspaceFolder}/export/windows/release/bin/SpecialEngine_WIN.exe"
 	  },
 	  {
 		"name": "Linux",
 		"type": "hxcpp",
 		"preLaunchTask": "Build Linux",
 		"request": "launch",
-		"program": "${workspaceFolder}/export/linux/release/bin/game-jam-template"
+		"program": "${workspaceFolder}/export/linux/release/bin/SpecialEngine_APP"
 	  },
 	  {
 		"name": "Mac",
 		"type": "hxcpp",
 		"preLaunchTask": "Build Mac",
 		"request": "launch",
-		"program": "${workspaceFolder}/export/macos/release/bin/game-jam-template"
+		"program": "${workspaceFolder}/export/macos/release/bin/SpecialEngine_MAC"
 	  },
 	],
   }

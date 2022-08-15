@@ -1,1 +1,31 @@
-export/
+### Crash Stuff
+crash-dialog/
+build-crash-dialog.bat
+build-crash-dialog-linux.sh
+build-crash-dialog-mac.sh
+
+### FNF-Bot
+FNFBot.exe
+
+### GameJolt-Specific
+source/GJKeys.hx
+source/GameJolt.hx
+
+### Source Testing
+source_test/
+
+### VS Code
+export/*
+.vscode/*
+.DS_Store
+# Local history which shouldn't be shared.
+desktop.ini
+.history/
+.ionide
+# ! means a file should be added regardless of it it gets ignored prior.
+# Including to allow others to use already set-up configuration tweaked for the project.
+!.code-workspace
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

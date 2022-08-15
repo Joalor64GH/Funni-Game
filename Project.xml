@@ -4,7 +4,10 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="game-jam-template" file="game-jam-template" main="Main" version="0.0.1" company="HaxeFlixel" />
+	<app title="Funni Game" main="Main" version="1.0.0-git" company="Joalor64GH" />
+	<app file="SpecialEngine_WIN" if="windows" />
+	<app file="SpecialEngine_APP" if="linux" />
+	<app file="SpecialEngine_MAC" if="mac" />
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
@@ -31,8 +34,51 @@
 
 	<set name="BUILD_DIR" value="export/debug" if="debug" />
 	<set name="BUILD_DIR" value="export/release" unless="debug" />
+
 	<source path="source" />
-	<assets path="assets" />
+
+    <!-- CUSTOM DEFINES -->
+	<define name="HAXEFLIXEL_LOGO"/> <!--Allows the Haxeflixel watermark to show on startup when compiled as release;.-->
+	<define name="HAXE_EXTENSION" unless="web || neko" />
+	<define name="LUA_EXTENSION" if="desktop" />
+    <define name="HSCRIPT_ALLOWED" />
+	<define name="VIDEO_PLUGIN" if="web || windows" unless="32bits"/>
+	<define name="SWF_ALLOWED"/>
+
+	<assets path="assets/images" />
+	<assets path="assets/data" />
+	<assets path="assets/videos" />
+	<assets path="assets/scripts" />
+	
+	<!-- <library name="noPreload" preload='false'/> -->
+	<!-- <library name="noPreload"/> -->
+	<assets path="assets/music" include="*.ogg"/>
+	<assets path="assets/sounds" include="*.ogg"/>
+
+	<!-- <define name="PRELOAD_ALL" /> -->
+	
+	<define name="PRELOAD_ALL" unless="web" />
+	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
+	
+	<section if="PRELOAD_ALL">
+		<library name="data"    preload="true" />
+		<library name="sounds"  preload="true" />
+		<library name="music" 	preload="true" />
+		<library name="images"  preload="true" />
+		<library name="videos"  preload="true" />
+		<library name="scripts" preload="true" />
+	</section>
+	
+	<section if="NO_PRELOAD_ALL">
+		<library name="data"    preload="false" />
+		<library name="sounds"  preload="false" />
+		<library name="music" 	preload="false" />
+		<library name="images"  preload="false" />
+		<library name="videos"  preload="false" />
+		<library name="scripts" preload="false" />
+	</section>
+
+	<assets path="assets/swf"         library="swf"     if="SWF_ALLOWED"/>
 
 	<!-- _______________________________ Libraries ______________________________ -->
 
@@ -40,9 +86,22 @@
 
 	<!--In case you want to use the addons package-->
 	<haxelib name="flixel-addons" />
+    <haxelib name="hscript" />
+    <haxelib name="hscript-ex" />
 
+	<haxelib name="actuate" />
+	<haxelib name="extension-webm" if="windows || mac"/> <!-- Make sure to use https://github.com/KadeDev/extension-webm/ -->
+	
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
+	<haxelib name="flixel-tools" />
+	<haxelib name="linc_luajit" if="LUA_EXTENSION"/>
+	<haxelib name="hxvm-luajit" if="LUA_EXTENSION"/>
+    <haxelib name="hxCodec" if="VIDEO_PLUGIN"/>
+	<haxelib name="SScript" if="HAXE_EXTENSION"/>
+	<haxelib name="swf" if="SWF_ALLOWED"/>
+	<haxelib name="systools" />
+	<ndll name="systools" haxelib="systools" />
 
 	<!--In case you want to use nape with flixel-->
 	<!--<haxelib name="nape-haxe4" />-->
