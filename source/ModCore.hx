@@ -19,7 +19,7 @@ class ModCore
 	 */
 	static final API_VERSION = "1.5.2";
 
-	static final MOD_DIRECTORY = "polymods";
+	static final MOD_DIRECTORY = "mods";
 
 	public static function initialize()
 	{
