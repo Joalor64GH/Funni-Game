@@ -4,15 +4,13 @@ build-crash-dialog.bat
 build-crash-dialog-linux.sh
 build-crash-dialog-mac.sh
 
-### FNF-Bot
-FNFBot.exe
-
 ### GameJolt-Specific
 source/GJKeys.hx
 source/GameJolt.hx
 
-### Source Testing
+### Source Stuff
 source_test/
+sourceUnstable/
 
 ### VS Code
 export/*
