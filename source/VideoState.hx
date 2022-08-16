@@ -25,7 +25,7 @@ import MainVariables._variables;
 
 using StringTools;
 
-class VideoState extends MusicBeatState
+class VideoState extends FlxState
 {
 	static private var nativeFramecount:String->Int = cpp.Lib.load("webmHelper", "GetFramecount", 1);
 

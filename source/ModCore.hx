@@ -115,7 +115,7 @@ class ModCore
 		return {
 			assetLibraryPaths: [
 				"sounds" => "./sounds", "images" => "./images", "music" => "./music",
-				"swf" => "./swf", "videos" => "./videos", "scripts" => "./scripts", "data" => "./data"
+				"swf" => "./swf", "videos" => "./videos", "scripts" => "./scripts", "data" => "./data", "fonts" => "./fonts"
 			]
 		}
 	}
