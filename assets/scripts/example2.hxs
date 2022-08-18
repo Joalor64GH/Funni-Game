@@ -1,0 +1,19 @@
+function onCreate()
+{
+    trace('at the beginning of PlayState (post script setup)');
+}
+
+function onCreatePost()
+{
+    trace('Post Character Creation');
+}
+
+function onUpdate(elapsed)
+{
+    //trace('during PlayState\'s Update Function');
+}
+
+function destroy()
+{
+    trace('Script Destroyed!');
+}
