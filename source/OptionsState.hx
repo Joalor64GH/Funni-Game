@@ -31,8 +31,7 @@ class OptionsState extends FlxState
 			switch (option.id)
 			{
 				case 0:
-					trace('Webm Loader');
-					FlxG.switchState(new VideoState());
+					trace('SWF Loader');
 				case 1:
 					trace('Back');
                     FlxG.switchState(new MainMenuState());
