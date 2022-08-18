@@ -8,7 +8,7 @@ import flixel.util.FlxColor;
 import haxe.Log;
 import lime.app.Application;
 
-class MainMenuState extends FlxState
+class OptionsState extends FlxState
 {
 	var substateColor:FlxColor;
 
@@ -17,11 +17,11 @@ class MainMenuState extends FlxState
 		substateColor = new FlxColor();
 
 		// Create menu
-		Menu.title = "Remind me to come up with a name later";
+		Menu.title = "Options Menu";
 		#if !web
-		Menu.options = ['Play', 'Mods', 'Options', 'Exit'];
+		Menu.options = ['Webm Loader', 'Back'];
 		#else
-		Menu.options = ['Play', 'Mods', 'Options'];
+		Menu.options = ['Webm Loader', 'Back'];
 		#end
 		Menu.includeExitBtn = false;
 		Menu.callback = (option:MenuSelection) ->
@@ -31,26 +31,11 @@ class MainMenuState extends FlxState
 			switch (option.id)
 			{
 				case 0:
-					trace('Play');
-					FlxG.switchState(new PlayState());
+					trace('Webm Loader');
+					FlxG.switchState(new VideoState());
 				case 1:
-					trace('Mods');
-					FlxG.switchState(new ModLoader());
-				case 2:
-					trace('Options');
-					FlxG.switchState(new OptionsState());
-				case 3:
-					trace('Exit');
-					#if (windows || cpp)
-					Sys.exit(0);
-					#else
-					openfl.system.System.exit(0);
-					#end
-					#if web
-					lime.utils.Log.error('I dunno how you did this but you can\'t use exit button on web idoit');
-					#end
-				default:
-					trace('something is fucked');
+					trace('Back');
+                    FlxG.switchState(new MainMenuState());
 			}
 		}
 		// Open menu
