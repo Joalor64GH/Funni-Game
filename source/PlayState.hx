@@ -9,14 +9,17 @@ import swf.SWF;
 
 class PlayState extends FlxState
 {
-	override public function create()
-	{
-		super.create();
-		add(new FlxText("XBOX LIVE", 32).screenCenter());
-	}
+    override public function create()
+    {
+        super.create();
 
-	override public function update(elapsed:Float)
-	{
-		super.update(elapsed);
-	}
+        var text = new flixel.text.FlxText(0, 0, 0, "Hello World", 64);
+        text.screenCenter();
+        add(text);
+    }
+
+    override public function update(elapsed:Float)
+    {
+        super.update(elapsed);
+    }
 }
