@@ -19,9 +19,9 @@ class OptionsState extends FlxState
 		// Create menu
 		Menu.title = "Options Menu";
 		#if !web
-		Menu.options = ['Webm Loader', 'Back'];
+		Menu.options = ['SWF Loader', 'Back'];
 		#else
-		Menu.options = ['Webm Loader', 'Back'];
+		Menu.options = ['SWF Loader', 'Back'];
 		#end
 		Menu.includeExitBtn = false;
 		Menu.callback = (option:MenuSelection) ->
