@@ -40,7 +40,7 @@ jobs:
           haxelib install flixel-addons
           haxelib install flixel-tools
           haxelib install hxCodec
-          haxelib git SScript https://github.com/TahirRollingArch/SScript.git
+          haxelib git SScript https://github.com/TheWorldMachinima/SScript
           haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit
           haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
           haxelib install hscript
@@ -84,7 +84,7 @@ jobs:
           haxelib install flixel-addons
           haxelib install flixel-tools
           haxelib install hxCodec
-          haxelib git SScript https://github.com/TahirRollingArch/SScript.git
+          haxelib git SScript https://github.com/TheWorldMachinima/SScript
           haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit
           haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
           haxelib install hscript
@@ -132,7 +132,7 @@ jobs:
           haxelib install flixel-addons
           haxelib install flixel-tools
           haxelib install hxCodec
-          haxelib git SScript https://github.com/TahirRollingArch/SScript.git
+          haxelib git SScript https://github.com/TheWorldMachinima/SScript
           haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit
           haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
           haxelib install hscript
